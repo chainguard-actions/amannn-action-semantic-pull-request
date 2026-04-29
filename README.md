@@ -1,6 +1,12 @@
 # amannn/action-semantic-pull-request
 
-Hardened GitHub Action by [Chainguard](https://www.chainguard.dev).
+Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/amannn/action-semantic-pull-request](https://github.com/amannn/action-semantic-pull-request).
+
+## Versions
+
+| Version | Tag | Upstream commit |
+|---------|-----|-----------------|
+| v6.1.1 | [`v6.1.1`](https://github.com/chainguard-actions/action-semantic-pull-request/tree/v6.1.1) | — |
 
 ## Privacy
 
