@@ -2,5 +2,6 @@
   "owner": "amannn",
   "name": "action-semantic-pull-request",
   "visibility": "internal",
-  "description": "A GitHub Action that ensures that your PR title matches the Conventional Commits spec"
+  "description": "A GitHub Action that ensures that your PR title matches the Conventional Commits spec",
+  "block_publish": false
 }
