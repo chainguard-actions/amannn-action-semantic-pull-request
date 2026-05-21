@@ -8,7 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v6.1.1 | [`v6.1.1`](https://github.com/chainguard-actions/action-semantic-pull-request/tree/v6.1.1) | — |
+| v6.1.1 | [`v6.1.1`](https://github.com/chainguard-actions/amannn-action-semantic-pull-request/tree/v6.1.1) | — |
 
 ## Privacy
 
