@@ -1,0 +1,37 @@
+name: Test headerPattern and headerPatternCorrespondence inputs
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_EVENT_NAME: pull_request
+      GITHUB_REF: refs/pull/1/merge
+      GITHUB_HEAD_REF: feature-branch
+      GITHUB_BASE_REF: main
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Create mock GitHub event
+        run: |
+          mkdir -p /tmp/github-event
+          cat > /tmp/github-event/event.json <<'EOF'
+          {
+            "pull_request": {
+              "title": "feat(api): add new endpoint",
+              "number": 1,
+              "labels": []
+            }
+          }
+          EOF
+          echo "GITHUB_EVENT_PATH=/tmp/github-event/event.json" >> $GITHUB_ENV
+      - id: action
+        uses: .
+        with:
+          headerPattern: '^(\w*)(?:\((\w*)\))?\!?: (.*)$'
+          headerPatternCorrespondence: 'type,scope,subject'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Assert action completed
+        run: |
+          echo "Action completed successfully with headerPattern and headerPatternCorrespondence inputs"
+          echo "PASS"
