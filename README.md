@@ -1,6 +1,6 @@
 # amannn/action-semantic-pull-request
 
-A GitHub Action that ensures that your PR title matches the Conventional Commits spec
+Ensure your PR title matches the Conventional Commits spec (https://www.conventionalcommits.org/).
 
 Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/amannn/action-semantic-pull-request](https://github.com/amannn/action-semantic-pull-request).
 
