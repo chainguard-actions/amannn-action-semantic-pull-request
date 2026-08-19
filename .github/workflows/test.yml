@@ -1,0 +1,41 @@
+name: 'Test'
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+        with:
+          version: 9
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+      - run: pnpm install
+      - run: pnpm lint && pnpm test
+
+  dist:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          fetch-depth: 0
+      - name: Check if `dist/` has been modified.
+        run: |
+          set -euxo pipefail
+
+          if [ $(git diff origin/main --name-only -- 'dist/**' | wc -l) -gt 0 ]
+          then
+            echo "Please do not update 'dist/'. CI will update it automatically on merge."
+            exit 1
+          fi

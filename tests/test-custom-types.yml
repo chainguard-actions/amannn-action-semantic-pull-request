@@ -1,4 +1,4 @@
-name: Test ignoreLabels input
+name: Test custom types input
 on:
   workflow_dispatch:
 jobs:
@@ -11,10 +11,11 @@ jobs:
         uses: .
         continue-on-error: true
         with:
-          ignoreLabels: |
-            skip-semantic-check
-            wip
-            dependencies
+          types: |
+            feat
+            fix
+            chore
+            docs
 
       - name: Assert action fails gracefully with expected error (no PR context)
         env:
