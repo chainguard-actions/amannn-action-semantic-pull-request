@@ -4,8 +4,13 @@
   "version": "v6.1.1",
   "commit_sha": "48f256284bd46cdaab1048c3721360e808335d50",
   "url": "https://github.com/amannn/action-semantic-pull-request",
-  "policy_sha": "d636be7e43ef829af6e853da6b3c7566db9f72fe",
+  "policy_sha": "374911c4be584df24e6da57af2d990570ef0f859",
   "test_policy_sha": "843adf9e4b8f85d0c08b27b9d0b09dd094b54702",
   "test_agent_version": "2",
-  "harden_agent_version": "2"
+  "harden_agent_version": "2",
+  "dist_artifact": {
+    "gcs_uri": "gs://patch-actions-node-artifacts/dist-artifacts/amannn/action-semantic-pull-request/v6.1.1/sha256-08e248fcc9f117f9684c8930b447c96745da8efb8ae9a384fecda380f9df9e63.tar.gz",
+    "sha256": "08e248fcc9f117f9684c8930b447c96745da8efb8ae9a384fecda380f9df9e63",
+    "size_bytes": 698600
+  }
 }
