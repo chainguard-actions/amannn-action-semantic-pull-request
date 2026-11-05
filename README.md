@@ -9,6 +9,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 | Version | Tag | Upstream commit | Hardening report |
 |---------|-----|-----------------|------------------|
 | v6.1.1 | [`v6.1.1`](https://github.com/chainguard-actions/amannn-action-semantic-pull-request/tree/v6.1.1) | [`48f2562`](https://github.com/amannn/action-semantic-pull-request/commit/48f256284bd46cdaab1048c3721360e808335d50) | [`HARDENING.md`](https://github.com/chainguard-actions/amannn-action-semantic-pull-request/blob/v6.1.1/HARDENING.md) |
+| v6.1.2 | [`v6.1.2`](https://github.com/chainguard-actions/amannn-action-semantic-pull-request/tree/v6.1.2) | [`2252a14`](https://github.com/amannn/action-semantic-pull-request/commit/2252a14e810aa9b85c2d560bd7070c802206ecf6) | [`HARDENING.md`](https://github.com/chainguard-actions/amannn-action-semantic-pull-request/blob/v6.1.2/HARDENING.md) |
 
 ## Privacy
 
